@@ -3,6 +3,7 @@ const todoInput = document.querySelector("#input-todo");
 const todoList = document.querySelector("#todo-list")
 
 todoForm.addEventListener("submit", addTodo);
+todoList.addEventListener("click", deleteTodo);
 
 function addTodo(e){
 
@@ -23,4 +24,12 @@ function addTodo(e){
 
     todoList.appendChild(li);
     
+}
+
+function deleteTodo(e){
+
+    e.preventDefault();
+
+    const parent = e.parentElement()
+
 }
