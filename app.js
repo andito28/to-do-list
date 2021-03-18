@@ -16,7 +16,7 @@ function addTodo(e){
     li.appendChild(document.createTextNode(todoInput.value));
 
     a.href = "#";
-    a.className = "badge badge-danger";
+    a.className = "badge badge-danger delete-todo";
 
     a.innerHTML = "Delete";
 
@@ -31,4 +31,10 @@ function deleteTodo(e){
 
     e.preventDefault();
 
+    if(e.target.classList.contains("delete-todo")){
+        
+        const parent = e.target.parentElement;
+        
+        parent.remove();
+    }
 }
