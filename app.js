@@ -26,10 +26,9 @@ function addTodo(e){
     
 }
 
+
 function deleteTodo(e){
 
     e.preventDefault();
-
-    const parent = e.parentElement()
 
 }
